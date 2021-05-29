@@ -74,7 +74,8 @@ belongs_to :order
 | Column      | Type       | Options           |
 |-------------|------------|-------------------|
 | item        | references | foreign_key: true |
-| user        | references | null: false       |
+| user        | references | foreign_key: true |
+
 ### Association
 
 - has_one :address
