@@ -17,8 +17,8 @@
 ### Association
 
 * has_many :items
-* has_many :comment
-- has_one :order
+* has_many :comments
+- has_many :orders
 
 ## items table
 
@@ -29,7 +29,7 @@
 | text                                | text       | null: false       |
 | category_id                         | integer    | null: false       |
 | status_id                           | integer    | null: false       |
-| user_id                             | integer    | foreign_key: true |
+| user                                | references | foreign_key: true |
 | postage_id                          | integer    | null: false       |
 | shipping_day_id                     | integer    | null: false       |
 | prefecture_id                       | integer    | null: false       |
@@ -37,7 +37,7 @@
 ### Association
 
 - belongs_to :user
-- has_many :comment
+- has_many :comments
 - has_one :order
 
 ## comments table
@@ -79,7 +79,7 @@ belongs_to :oder
 | user        | references | null: false       |
 ### Association
 
-- has_one :addresses
+- has_one :address
 - belongs_to :user
 - belongs_to :item
 
