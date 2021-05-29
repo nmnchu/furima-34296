@@ -51,8 +51,6 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :item
-- has_one :oder
 
 ## addresses table
 
@@ -61,15 +59,14 @@
 | postal_code    | string     | null: false       |
 | order          | references | foreign_key: true |
 | city           | string     | null: false       |
-| phone_number   | string     | foreign_key: true |
+| phone_number   | string     | null: false       |
 | prefecture_id  | integer    | null: false       |
 | house_number   | string     | null: false       |
 | build_number   | string     |                   |
 
 ### Association
 
-belongs_to :user
-belongs_to :oder
+belongs_to :order
 
 ## orders table
 
