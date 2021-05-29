@@ -32,7 +32,7 @@
 | user_id                             | integer    | foreign_key: true |
 | postage_id                          | integer    | null: false       |
 | shipping_day_id                     | integer    | null: false       |
-| prefectures                         | integer    | null: false       |
+| prefecture_id                       | integer    | null: false       |
 
 ### Association
 
@@ -62,13 +62,14 @@
 | order          | references | foreign_key: true |
 | city           | string     | null: false       |
 | phone_number   | string     | foreign_key: true |
-| prefectures    | integer    | null: false       |
+| prefecture_id  | integer    | null: false       |
 | house_number   | string     | null: false       |
 | build_number   | string     |                   |
 
 ### Association
 
 belongs_to :user
+belongs_to :oder
 
 ## orders table
 
@@ -78,7 +79,7 @@ belongs_to :user
 | user        | references | null: false       |
 ### Association
 
-- has_one :oder
+- has_one :addresses
 - belongs_to :user
 - belongs_to :item
 
