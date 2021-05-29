@@ -18,6 +18,7 @@
 
 * has_many :items
 * has_many :comment
+- has_one :order
 
 ## items table
 
@@ -31,34 +32,34 @@
 | user_id                             | integer    | foreign_key: true |
 | postage_id                          | integer    | null: false       |
 | shipping_day_id                     | integer    | null: false       |
-| shipping_area_id                    | integer    | null: false       |
+| prefectures                         | integer    | null: false       |
 
 ### Association
 
 - belongs_to :user
 - has_many :comment
-- has_one :orders
+- has_one :order
 
 ## comments table
 
 | Column      | Type       | Options           |
 |-------------|------------|-------------------|
-| item_id     | references | foreign_key: true |
-| user_id     | references | null: false       |
+| item        | references | foreign_key: true |
+| user        | references | null: false       |
 | text        | text       | null: false       |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :item
+- has_one :oder
 
 ## addresses table
 
 | Column         | Type       | Options           |
 |----------------|------------|-------------------|
-| user_id        | references | null: false       |
 | postal_code    | string     | null: false       |
-| orders         | references | foreign_key: true |
+| order          | references | foreign_key: true |
 | city           | string     | null: false       |
 | phone_number   | string     | foreign_key: true |
 | prefectures    | integer    | null: false       |
@@ -71,11 +72,10 @@ belongs_to :user
 
 ## orders table
 
-| Column      | Type       | Options                        |
-|-------------|------------|--------------------------------|
-| item_id     | integer	   | null: false, foreign_key: true |
-| user_id     | integer	   | null: false, foreign_key: true |
-
+| Column      | Type       | Options           |
+|-------------|------------|-------------------|
+| item        | references | foreign_key: true |
+| user        | references | null: false       |
 ### Association
 
 - has_one :oder
