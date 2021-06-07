@@ -65,6 +65,7 @@
                     <mxGeometry y="234" width="160" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="124" value="" style="endArrow=ERmany;shadow=0;strokeWidth=1;rounded=0;endFill=0;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=ERone;startFill=0;" parent="1" source="105" target="113" edge="1">
+
                     <mxGeometry x="0.5" y="41" relative="1" as="geometry">
                         <mxPoint x="380" y="192" as="sourcePoint"/>
                         <mxPoint x="540" y="192" as="targetPoint"/>
@@ -172,6 +173,7 @@
                 </mxCell>
                 <mxCell id="150" value="メモ：カラムは単数系" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
                     <mxGeometry x="35" y="620" width="130" height="20" as="geometry"/>
+                
                 </mxCell>
             </root>
         </mxGraphModel>

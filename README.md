@@ -40,6 +40,7 @@
 - has_many :comments
 - has_one :order
 
+
 ## comments table
 
 | Column      | Type       | Options           |
@@ -69,6 +70,7 @@
 
 belongs_to :order
 
+
 ## orders table
 
 | Column      | Type       | Options           |
@@ -81,4 +83,5 @@ belongs_to :order
 - has_one :address
 - belongs_to :user
 - belongs_to :item
+
 
