@@ -20,6 +20,6 @@ class Item < ApplicationRecord
     validates :status
     validates :prefecture
     validates :shipping_day
-    validates :price, numericality: {greater_than: 299, less_than: 10000000}
+    validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
   end
 end
