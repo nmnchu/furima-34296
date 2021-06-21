@@ -3,10 +3,10 @@ FactoryBot.define do
     name                 {"電卓"}
     text                 {"電卓です"}
     category_id          {2}
-    status_id            {1}
-    prefecture_id        {1}
-    shipping_day_id      {1}
-    postage_id           {1}
+    status_id            {2}
+    prefecture_id        {2}
+    shipping_day_id      {2}
+    postage_id           {2}
     price                {5000}
     association :user
 
