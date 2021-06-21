@@ -89,5 +89,35 @@ RSpec.describe Item, type: :model do
       @item.valid?
       expect(@item.errors.full_messages).to include("Price is not included in the list")
     end
+
+    it 'category_idが1の場合は登録できないこと' do
+      @item.category_id = 1
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Category must be other than 1")
+    end
+
+    it 'postage_idが1の場合は登録できないこと' do
+      @item.postage_id = 1
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Postage must be other than 1")
+    end
+
+    it 'status_idが1の場合は登録できないこと' do
+      @item.status_id = 1
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Status must be other than 1")
+    end
+
+    it 'prefecture_idが1の場合は登録できないこと' do
+      @item.prefecture_id = 1
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Prefecture must be other than 1")
+    end
+
+    it 'shipping_day_idが1の場合は登録できないこと' do
+      @item.shipping_day_id = 1
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Shipping_day must be other than 1")
+    end
   end
 end
