@@ -14,12 +14,12 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :image
-    validates :category
-    validates :postage
+    validates :category_id
+    validates :postage_id
     validates :text
-    validates :status
-    validates :prefecture
-    validates :shipping_day
+    validates :status_id
+    validates :prefecture_id
+    validates :shipping_day_id
     validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
   end
 
