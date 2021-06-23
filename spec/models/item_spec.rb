@@ -45,7 +45,7 @@ RSpec.describe Item, type: :model do
       end
 
       it 'postageが空だと登録できないこと' do
-        @item.postage = nil
+        @item.postage_id = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Postage can't be blank")
       end
