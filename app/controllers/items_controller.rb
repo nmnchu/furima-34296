@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :new,]
+  before_action :authenticate_user!, only: [:create, :new, :edit, :destroy]
   
 
   def index
