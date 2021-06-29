@@ -20,6 +20,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    unless @item.user == current_user
+      redirect_to root_path
+    end
   end
 
   def update
