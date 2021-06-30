@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :edit]
+  before_action :authenticate_user!, only: [:new, :create]
   before_action :find_item, only: [:show, :edit, :update]
+  before_action :redirect_root, except: :index
 
   def index
     @items = Item.order(id: :DESC)
@@ -36,8 +37,8 @@ class ItemsController < ApplicationController
   def show
   end
 
-  def destroy
-  end
+  # def destroy
+  # end
 
   private
 
@@ -47,6 +48,10 @@ class ItemsController < ApplicationController
 
   def find_item
     @item = Item.find(params[:id])
+  end
+
+  def redirect_root
+    redirect_to root_path unless user_signed_in?
   end
 
 end
