@@ -9,7 +9,7 @@ class Item < ApplicationRecord
 
   has_one_attached :image
   # has_many :comments
-  # has_one :order
+  has_one :order
 
   with_options presence: true do
     validates :name

@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless current_user.id == @item.user.id
+    redirect_to action: :index unless current_user.id == @item.user.id && @item.order.blank?
   end
 
 end

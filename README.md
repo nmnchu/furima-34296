@@ -64,7 +64,7 @@
 | phone_number   | string     | null: false       |
 | prefecture_id  | integer    | null: false       |
 | house_number   | string     | null: false       |
-| build_number   | string     |                   |
+| build_name     | string     |                   |
 
 ### Association
 
